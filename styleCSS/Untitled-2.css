@@ -1,0 +1,271 @@
+ 
+    th {
+      background-color: #e68506; /* cor do cabeçalho */
+      color: rgb(76, 6, 215);              /* cor do texto do cabeçalho */
+      padding: 10px;
+}
+
+    td {
+      background-color: rgb(230, 134, 38); /* cor de fundo das células */
+      color: #08031a;               /* cor do texto */
+      padding: 8px;
+      text-align: center;
+}
+
+    tr:nth-child(even) td {
+      background-color:#e68506; /* cor alternada para linhas pares */
+}
+
+    td:hover {
+    background-color: rgb(125, 29, 29); /* Exemplo de cor de hover mais escura */
+}
+/tabela de destinos/
+   td a {
+     color: #0a0a09;
+      text-decoration: none;
+      font-weight: bold;
+}
+/tabela de destinos/
+   td a:hover {
+      color: #e68506;
+      text-decoration: underline;
+}
+
+/tabela de destinos/
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color:rgba(21, 37, 52);
+}
+    a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+  color:  #000000; /* opcional: faz o link herdar a cor do texto ao redor */
+}
+
+/* 🖼 Banner de fundo */
+    .banner {
+      width: 100%;                     /* ocupa toda a largura da tela */
+      height: 100px;                   /* altura do banner */
+      /* Caminho relativo correto */
+    
+  background-size: cover;                  /* Preenche todo o banner */
+  background-position: center;             /* Centraliza a imagem */
+  background-repeat: no-repeat;            /* Evita repetição */
+  
+  display: flex;
+  align-items: flex-start;                 /* Alinha conteúdo no topo */
+  justify-content: center;
+  padding-top: 10px;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  position: relative;
+  overflow: hidden;                        /* Garante que nada "vaze" do banner */
+}
+
+/* Camada escura para legibilidade */
+/detalhe da camada escura/
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(21, 37, 52); /* camada escura transparente */
+      display: flex;
+      align-items: flex-start; /* alinha ao topo */
+      justify-content: center;
+      background-color:rgb(149, 13, 13)
+    
+}
+/* Conteúdo sobre o banner */
+    .banner-texto {
+      position: relative;
+      color:  #e68506;
+      text-align:end;
+      z-index: 2;
+      margin-top: 0px; /* ajusta a posição do texto */
+     
+}
+
+    .banner-texto h1 {
+      font-size: 4rem;
+      margin: 0; 
+}
+
+    .banner-texto p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+}
+
+    /conteúdo após a tabela/
+    /* 1. Definição da Animação: zoom-in */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Começa 20% menor */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Termina no tamanho normal */
+    }
+}
+/* Estilo para o título "NOSSOS PACOTES EM DESTAQUE" */
+    .titulo-pacotes {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Centralizar o texto horizontalmente */
+    text-align: center;
+    
+    /* Trocar a cor do texto (Usando o seu destaque) */
+    color: white; 
+    
+    /* Aumenta o tamanho da fonte */
+    font-size: 2.5rem; 
+    
+    /* Espaçamento */
+    margin-top: 40px; 
+    margin-bottom: 30px; 
+    
+    /* --- EFEITOS DE DESTAQUE ADICIONADOS --- */
+    
+    /* Garante que o texto fique em negrito forte */
+    font-weight: 800; 
+    
+    /* Adiciona espaçamento entre as letras para um visual mais limpo e "aéreo" */
+    letter-spacing: 2px;
+    
+    /* Opcional: Transforma todas as letras em maiúsculas (se você não o fez no HTML) */
+    text-transform: uppercase; 
+
+    animation: zoomIn 1s ease-out forwards;
+
+    opacity: 0;
+}
+/* Estilo para a classe 'quadro-branco' */
+    .quadro-branco {
+  /* 1. Define a cor de fundo */
+    background-color: white; 
+            
+  /* 2. Define a largura do espaço */
+     width: auto; 
+            
+  /* 3. Define a altura do espaço */
+    height: auto; 
+            
+  /* 4. Adiciona uma borda sutil para que ele se destaque na página (opcional) */
+    border: 0px solid #ccc; 
+            
+  /* 5. Adiciona algum espaçamento interno para o conteúdo (opcional) */
+    padding: 15px; 
+            
+            
+    text-align: center;
+        }
+
+        /* Define um fundo sutil para o corpo da página para que o quadro branco seja visível */
+    body {
+            background-color: #060505; 
+            font-family: Arial, sans-serif;
+}
+    /* NOVO: Estilo para a frase específica */
+    .frase-grande {
+        /* Aumenta o tamanho da fonte */
+        font-size: 1.5em; 
+        
+        /* O negrito já vem do <strong>, mas podemos garantir: */
+        font-weight: bold;
+        color: darkred; /* Exemplo de cor para destaque extra */
+}
+    .imagem-direita {
+    /* 1. Garante que a imagem se comporte como bloco */
+    display: block; 
+    
+    /* 2. Remove qualquer centralização ou alinhamento automático */
+    margin: 0;
+    border:none
+    /* 3. Define a largura e altura desejadas */
+    width: 100%;       /* Faz a imagem ocupar 100% da largura do contêiner (.promocao) */
+    height: 210px;     /* Mantém a altura desejada */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+/* NOVO: Contêiner principal para alinhar os pacotes lado a lado */
+    .pacotes-container {
+    display: flex;
+    /* Faz os pacotes ficarem lado a lado e quebrarem em telas menores */
+    flex-wrap: wrap; 
+    /* Distribui os pacotes no centro ou com espaço igual entre eles */
+    justify-content:center; 
+    gap: 80px; /* Espaço entre os pacotes */
+    padding: 40px 0; /* Espaço em cima e embaixo do bloco de pacotes */
+}
+
+/* NOVO: Estilo do cartão de cada pacote */
+    .pacote-individual {
+    /* Largura fixa que você estava usando para o quadro branco, + um ajuste */
+    width: 300px; 
+    background-color: white; /* Cor de fundo para o cartão inteiro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efeito 3D */
+    overflow: hidden; /* Garante que a imagem e a borda arredondada se encaixem */
+    transition: transform 0.5s ease; /* Transição suave para o efeito hover */
+}
+/* Efeito hover para o cartão do pacote */
+    .pacote-individual:hover {
+   transform: scale(1.05);        /* aumenta o cartão todo */
+}
+/* ⚙ Rodapé */
+ footer {
+  
+    background-color: rgb(0, 0, 0);
+    color: #e68506; 
+    padding: 15px 0;
+    font-size: 14px;
+    
+    /* 👇 ESTE É O SEGREDO! Ele centraliza todo o texto filho. */
+    text-align: center; 
+    
+    /* Remova display: flex, justify-content e align-items para que o texto
+       fique em coluna (um abaixo do outro) */
+    
+    /* Exemplo da borda que estava tentando aplicar (use uma cor visível!) */
+    border: 3px solid #000000; 
+}
+
+/* Estilos para o link (garante que o texto seja centralizado dentro do seu bloco) */
+footer p, footer h1 {
+    /* Garante que o elemento ocupe a largura total para que o text-align: center 
+       do pai funcione corretamente em alguns casos, embora geralmente não seja necessário. 
+       O principal é que o text-align: center esteja no elemento pai (footer). */
+    width: 100%; 
+    margin: 5px 0; /* Espaçamento entre os textos */
+}
+footer p a {
+    /* COR DE ALTO CONTRASTE: */
+    color: #e68506!important; 
+    text-decoration: underline !important; 
+}
+ 
+body {
+    /* 🔑 ESSENCIAL: Garante que o body ocupe toda a altura da janela */
+    min-height: 100vh;
+    
+    /* 1. Define o caminho para a sua imagem (verifique se o caminho é ../img/ALEXANDRIA.jpeg se o CSS está na subpasta 'Stylcss') */
+    background-image: url(); 
+    
+    /* 2. Garante que a imagem cubra toda a área do fundo */
+    background-size: cover; 
+    
+    /* 3. Centraliza a imagem no fundo (opcional) */
+    background-position: center; 
+    
+    /* 4. Impede que a imagem de fundo role com o conteúdo (efeito parallax) */
+    background-attachment: fixed;
+    
+    /* 5. Evita que a imagem se repita se for pequena */
+    background-repeat: no-repeat; 
+    
+    /* 6. Cor de fundo sólida, caso a imagem não carregue */
+    background-color: #ffefef; 
+    
+    font-family: Arial, sans-serif; /* Mantenha a fonte */
+}
